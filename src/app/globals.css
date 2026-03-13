@@ -1,0 +1,64 @@
+@import "tailwindcss";
+
+:root {
+  /* Green Palette — Unified Green System */
+  --green-primary: #2e7d32;
+  --green-light: rgba(46, 125, 50, 0.12);
+  --green-dark: #1b5e20;
+  --surface-dark: #1a2e1a;
+
+  /* Typography Colors */
+  --heading-color: #1a1a1a;
+  --body-color: #4a4a4a;
+  --caption-color: #6b6b6b;
+
+  /* Backgrounds */
+  --background: #ffffff;
+  --background-alt: #f8faf8;
+
+  /* Section Spacing */
+  --section-gap: 96px;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--heading-color);
+  --color-green-primary: var(--green-primary);
+  --color-green-light: var(--green-light);
+  --color-green-dark: var(--green-dark);
+  --color-surface-dark: var(--surface-dark);
+  --color-heading: var(--heading-color);
+  --color-body: var(--body-color);
+  --color-caption: var(--caption-color);
+  --color-bg-alt: var(--background-alt);
+  --font-sans: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+/* Global Resets */
+body {
+  background: var(--background);
+  color: var(--body-color);
+  font-family: var(--font-sans);
+}
+
+/* Focus styles for accessibility */
+*:focus-visible {
+  outline: 2px solid var(--green-primary);
+  outline-offset: 2px;
+}
+
+/* Smooth scroll */
+html {
+  scroll-behavior: smooth;
+}
+
+/* FAQ accordion transition */
+.faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease-out;
+}
+
+.faq-answer.open {
+  max-height: 500px;
+}
