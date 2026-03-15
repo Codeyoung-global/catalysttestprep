@@ -42,8 +42,8 @@ export default function TrialBenefits() {
         {/* Benefit Cards */}
         <div className="grid gap-8 md:grid-cols-3">
           {benefits.map((benefit, i) => (
-            <div key={i} className="rounded-xl bg-white p-8 text-center shadow-sm">
-              <div className="mb-4 flex justify-center">{benefit.icon}</div>
+            <div key={i} className={`hover-lift animate-fade-in-up delay-${(i + 1) * 200} rounded-xl bg-white p-8 text-center shadow-sm`}>
+              <div className="animate-bounce-gentle mb-4 flex justify-center">{benefit.icon}</div>
               <h3 className="mb-2 text-xl font-semibold text-heading">{benefit.title}</h3>
               <p className="text-sm text-body">{benefit.description}</p>
             </div>

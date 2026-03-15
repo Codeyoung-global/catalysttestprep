@@ -4,33 +4,31 @@ import Footer from "@/components/Footer";
 import { courses, getCourseById, getAllCourseIds } from "@/data/courses";
 import type { Metadata } from "next";
 
+interface CoursePageProps {
+  params: Promise<{ course: string }>;
+}
+
 /* ---------- Static params for SSG ---------- */
-export function generateStaticParams() {
+export async function generateStaticParams() {
   return getAllCourseIds().map((id) => ({ course: id }));
 }
 
 /* ---------- Dynamic metadata ---------- */
-export function generateMetadata({
-  params,
-}: {
-  params: { course: string };
-}): Metadata {
-  const course = getCourseById(params.course);
-  if (!course) return { title: "Course Not Found" };
+export async function generateMetadata({ params }: CoursePageProps): Promise<Metadata> {
+  const { course } = await params;
+  const courseData = getCourseById(course);
+  if (!courseData) return { title: "Course Not Found" };
 
   return {
-    title: `${course.fullName} | Catalyst Test Prep`,
-    description: course.description,
+    title: `${courseData.fullName} | Catalyst Test Prep`,
+    description: courseData.description,
   };
 }
 
 /* ---------- Page ---------- */
-export default function CoursePage({
-  params,
-}: {
-  params: { course: string };
-}) {
-  const course = getCourseById(params.course);
+export default async function CoursePage({ params }: CoursePageProps) {
+  const { course: courseSlug } = await params;
+  const course = getCourseById(courseSlug);
   if (!course) notFound();
 
   return (

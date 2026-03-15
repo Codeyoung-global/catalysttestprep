@@ -56,14 +56,14 @@ export default function Hero() {
                       <div className="flex flex-col items-center gap-12 lg:flex-row lg:items-center lg:gap-16">
                         {/* Left Column */}
                                 <div className="flex-1 lg:max-w-[55%]">
-                                            <h1 className="text-4xl font-bold leading-tight text-heading md:text-5xl" style={{ maxWidth: "600px" }}>
+                                            <h1 className="animate-fade-in-up text-4xl font-bold leading-tight text-heading md:text-5xl" style={{ maxWidth: "600px" }}>
                                                           1-on-1 Online SAT Prep That Adds 150+ Points{" "}
-                                                          <span className="text-green-primary">— Guaranteed</span>
+                                                          <span className="text-gradient-green">— Guaranteed</span>
                                             </h1>
-                                            <p className="mt-6 text-lg text-body md:text-xl" style={{ maxWidth: "540px" }}>
+                                            <p className="animate-fade-in-up delay-200 mt-6 text-lg text-body md:text-xl" style={{ maxWidth: "540px" }}>
                                                           Live sessions with Ivy-level tutors. A proprietary AI-powered curriculum. And a money-back guarantee if you don&apos;t hit your target score.
                                             </p>
-                                            <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:gap-6">
+                                            <div className="animate-fade-in-up delay-400 mt-8 flex flex-col gap-3 sm:flex-row sm:gap-6">
                                               {["Personalized 1-on-1 Sessions", "AI-Powered Curriculum", "Score Guarantee"].map((item) => (
                           <div key={item} className="flex items-center gap-2">
                                             <svg className="h-5 w-5 shrink-0 text-green-primary" fill="currentColor" viewBox="0 0 20 20">
@@ -88,8 +88,8 @@ export default function Hero() {
                                 </div>
                       
                         {/* Right Column — Multi-Step Form */}
-                                <div className="w-full lg:max-w-[420px]" id="hero-form">
-                                            <div className="rounded-2xl border border-gray-200 bg-white p-8 shadow-lg">
+                                <div className="w-full animate-slide-right delay-300 lg:max-w-[420px]" id="hero-form">
+                                            <div className="animate-pulse-glow rounded-2xl border border-gray-200 bg-white p-8 shadow-lg">
                                               {submitted ? (
                           <div className="flex flex-col items-center py-6 text-center">
                                             <div className="mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-green-light">

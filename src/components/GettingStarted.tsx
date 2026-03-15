@@ -39,9 +39,9 @@ export default function GettingStarted() {
             <div className="absolute left-[calc(12.5%+24px)] right-[calc(12.5%+24px)] top-6 h-0.5 bg-gray-200" />
 
             {steps.map((step) => (
-              <div key={step.number} className="relative flex w-1/4 flex-col items-center px-4 text-center">
+              <div key={step.number} className={`animate-fade-in-up delay-${step.number * 200} relative flex w-1/4 flex-col items-center px-4 text-center`}>
                 {/* Number Circle */}
-                <div className="relative z-10 flex h-12 w-12 items-center justify-center rounded-full bg-green-light text-xl font-bold text-green-primary">
+                <div className="relative z-10 flex h-12 w-12 items-center justify-center rounded-full bg-green-light text-xl font-bold text-green-primary transition-transform hover:scale-110">
                   {step.number}
                 </div>
                 <h3 className="mt-4 text-base font-bold text-heading">{step.title}</h3>

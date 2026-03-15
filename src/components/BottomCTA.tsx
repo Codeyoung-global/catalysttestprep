@@ -2,12 +2,12 @@ export default function BottomCTA() {
   return (
     <section className="bg-surface-dark" style={{ padding: "var(--section-gap) 0" }}>
       <div className="mx-auto max-w-3xl px-6 text-center">
-        <h2 className="mb-6 text-3xl font-bold text-white md:text-4xl">
+        <h2 className="animate-fade-in-up mb-6 text-3xl font-bold text-white md:text-4xl">
           Ready to Add 150+ Points to Your SAT Score?
         </h2>
         <a
           href="#hero-form"
-          className="inline-block rounded-lg bg-green-primary px-10 py-4 text-lg font-bold text-white transition-colors hover:bg-green-dark"
+          className="animate-scale-in delay-300 inline-block rounded-lg bg-green-primary px-10 py-4 text-lg font-bold text-white transition-all hover:bg-green-dark hover:scale-105"
         >
           Start My Free SAT Prep Trial &rarr;
         </a>

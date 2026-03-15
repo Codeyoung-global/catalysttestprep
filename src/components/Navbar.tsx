@@ -60,6 +60,9 @@ export default function Navbar() {
           <Link href="/about" className="text-sm font-medium text-body transition-colors hover:text-green-primary">
             About Us
           </Link>
+          <Link href="/calculator-tools" className="text-sm font-medium text-body transition-colors hover:text-green-primary">
+            Calculator Tools
+          </Link>
           <a href="#pricing" className="text-sm font-medium text-body transition-colors hover:text-green-primary">
             Pricing
           </a>
@@ -146,6 +149,9 @@ export default function Navbar() {
             </Link>
             <Link href="/about" className="text-sm font-medium text-body" onClick={() => setMenuOpen(false)}>
               About Us
+            </Link>
+            <Link href="/calculator-tools" className="text-sm font-medium text-body" onClick={() => setMenuOpen(false)}>
+              Calculator Tools
             </Link>
             <a href="#pricing" className="text-sm font-medium text-body" onClick={() => setMenuOpen(false)}>
               Pricing

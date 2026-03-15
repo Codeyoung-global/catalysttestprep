@@ -5,7 +5,7 @@ export default function Footer() {
   return (
     <footer className="bg-gray-900 py-12">
       <div className="mx-auto max-w-7xl px-6">
-        <div className="grid gap-8 md:grid-cols-4">
+        <div className="grid gap-8 md:grid-cols-3 lg:grid-cols-5">
           {/* Brand */}
           <div>
             <Link href="/" className="inline-block">
@@ -44,6 +44,19 @@ export default function Footer() {
               <li><Link href="/pricing" className="text-sm text-gray-300 hover:text-white transition-colors">Pricing</Link></li>
               <li><a href="https://blog.catalysttestprep.com" target="_blank" rel="noopener noreferrer" className="text-sm text-gray-300 hover:text-white transition-colors">Blog</a></li>
               <li><Link href="/book-diagnostic" className="text-sm text-gray-300 hover:text-white transition-colors">Book a Diagnostic</Link></li>
+            </ul>
+          </div>
+
+          {/* Free Tools */}
+          <div>
+            <h4 className="mb-4 text-sm font-semibold uppercase tracking-wider text-gray-400">Free Tools</h4>
+            <ul className="space-y-2">
+              <li><Link href="/calculator-tools" className="text-sm text-gray-300 hover:text-white transition-colors">All Calculators</Link></li>
+              <li><a href="https://www.catalysttestprep.com/calculator-tools/sat-score-calculator" target="_blank" rel="noopener noreferrer" className="text-sm text-gray-300 hover:text-white transition-colors">SAT Calculator</a></li>
+              <li><a href="https://www.catalysttestprep.com/calculator-tools/act-score-calculator" target="_blank" rel="noopener noreferrer" className="text-sm text-gray-300 hover:text-white transition-colors">ACT Calculator</a></li>
+              <li><Link href="/calculator-tools/psat-score-calculator" className="text-sm text-gray-300 hover:text-white transition-colors">PSAT Calculator</Link></li>
+              <li><Link href="/calculator-tools/ap-score-calculator" className="text-sm text-gray-300 hover:text-white transition-colors">AP Calculator</Link></li>
+              <li><Link href="/calculator-tools/gpa-calculator" className="text-sm text-gray-300 hover:text-white transition-colors">GPA Calculator</Link></li>
             </ul>
           </div>
 

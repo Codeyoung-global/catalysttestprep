@@ -68,8 +68,8 @@ export default function WhyCatalyst() {
 
         <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
           {features.map((feature, i) => (
-            <div key={i} className="rounded-xl border border-gray-100 bg-white p-8 shadow-sm" style={{ minHeight: "180px" }}>
-              <div className="mb-4">{feature.icon}</div>
+            <div key={i} className={`hover-lift animate-fade-in-up delay-${(i + 1) * 100} rounded-xl border border-gray-100 bg-white p-8 shadow-sm`} style={{ minHeight: "180px" }}>
+              <div className="mb-4 transition-transform duration-300 hover:scale-110">{feature.icon}</div>
               <h3 className="mb-2 text-lg font-bold text-heading">{feature.title}</h3>
               <p className="text-base text-body">{feature.description}</p>
             </div>
