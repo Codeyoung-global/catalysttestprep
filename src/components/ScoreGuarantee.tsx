@@ -1,3 +1,7 @@
+"use client";
+
+import AnimateOnScroll from "./AnimateOnScroll";
+
 export default function ScoreGuarantee() {
   const guaranteeCards = [
     {
@@ -36,49 +40,57 @@ export default function ScoreGuarantee() {
     <section className="bg-white" style={{ padding: "var(--section-gap) 0" }}>
       <div className="mx-auto max-w-7xl px-6">
         {/* Header with Shield Icon */}
-        <div className="mb-4 flex justify-center">
-          <svg className="h-14 w-14 animate-bounce-gentle text-green-primary" fill="currentColor" viewBox="0 0 20 20">
-            <path fillRule="evenodd" d="M2.166 4.999A11.954 11.954 0 0010 1.944 11.954 11.954 0 0017.834 5c.11.65.166 1.32.166 2.001 0 5.225-3.34 9.67-8 11.317C5.34 16.67 2 12.225 2 7c0-.682.057-1.35.166-2.001zm11.541 3.708a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
-          </svg>
-        </div>
+        <AnimateOnScroll animation="scale-in">
+          <div className="mb-4 flex justify-center">
+            <div className="flex h-20 w-20 items-center justify-center rounded-full bg-green-light">
+              <svg className="h-10 w-10 text-green-primary" fill="currentColor" viewBox="0 0 20 20">
+                <path fillRule="evenodd" d="M2.166 4.999A11.954 11.954 0 0010 1.944 11.954 11.954 0 0017.834 5c.11.65.166 1.32.166 2.001 0 5.225-3.34 9.67-8 11.317C5.34 16.67 2 12.225 2 7c0-.682.057-1.35.166-2.001zm11.541 3.708a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+              </svg>
+            </div>
+          </div>
+        </AnimateOnScroll>
 
-        <h2 className="mb-4 text-center text-3xl font-bold text-heading md:text-4xl">
-          Our Score Guarantee
-        </h2>
-
-        <p className="mx-auto mb-12 max-w-2xl text-center text-body">
-          We&apos;re so confident in our program that we back every student with a
-          score guarantee. Hit <strong className="text-heading">1400+ on the SAT</strong> or
-          improve by <strong className="text-heading">150+ points</strong> from your
-          diagnostic &mdash; or get your money back.
-        </p>
+        <AnimateOnScroll animation="fade-up">
+          <h2 className="mb-4 text-center text-3xl font-bold text-heading md:text-4xl">
+            Our Score Guarantee
+          </h2>
+          <p className="mx-auto mb-12 max-w-2xl text-center text-body">
+            We&apos;re so confident in our program that we back every student with a
+            score guarantee. Hit <strong className="text-heading">1400+ on the SAT</strong> or
+            improve by <strong className="text-heading">150+ points</strong> from your
+            diagnostic &mdash; or get your money back.
+          </p>
+        </AnimateOnScroll>
 
         {/* Guarantee Cards */}
         <div className="grid gap-8 md:grid-cols-3">
           {guaranteeCards.map((card, i) => (
-            <div
-              key={i}
-              className={`hover-lift animate-fade-in-up delay-${(i + 1) * 200} flex flex-col items-center rounded-xl border border-gray-100 bg-bg-alt p-8 text-center shadow-sm`}
-            >
-              <div className="mb-4">{card.icon}</div>
-              <h3 className="mb-3 text-xl font-bold text-heading">{card.title}</h3>
-              <p className="text-sm leading-relaxed text-body">{card.description}</p>
-            </div>
+            <AnimateOnScroll key={i} animation="fade-up" delay={i * 150}>
+              <div className="hover-lift flex h-full flex-col items-center rounded-xl border border-gray-100 bg-bg-alt p-8 text-center shadow-sm">
+                <div className="mb-4 flex h-16 w-16 items-center justify-center rounded-2xl bg-green-light">
+                  {card.icon}
+                </div>
+                <h3 className="mb-3 text-xl font-bold text-heading">{card.title}</h3>
+                <p className="text-sm leading-relaxed text-body">{card.description}</p>
+              </div>
+            </AnimateOnScroll>
           ))}
         </div>
 
         {/* FAQ Link */}
-        <div className="mt-10 text-center">
-          <a
-            href="#faq"
-            className="inline-flex items-center gap-2 text-sm font-medium text-green-primary transition-colors hover:text-green-dark"
-          >
-            Read the full guarantee details in our FAQ
-            <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-              <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
-            </svg>
-          </a>
-        </div>
+        <AnimateOnScroll animation="fade-up" delay={400}>
+          <div className="mt-10 text-center">
+            <a
+              href="#faq"
+              className="inline-flex items-center gap-2 text-sm font-medium text-green-primary transition-colors hover:text-green-dark"
+            >
+              Read the full guarantee details in our FAQ
+              <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
+              </svg>
+            </a>
+          </div>
+        </AnimateOnScroll>
       </div>
     </section>
   );

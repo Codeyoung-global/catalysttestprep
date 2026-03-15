@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect, useCallback } from "react";
+import AnimateOnScroll from "./AnimateOnScroll";
 
 const testimonials = [
   {
@@ -64,16 +65,17 @@ const testimonials = [
 export default function TestimonialSlider() {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isHovered, setIsHovered] = useState(false);
+  const [slideDirection, setSlideDirection] = useState<"left" | "right">("right");
 
-  // Number of visible cards depends on viewport — we manage via CSS
-  // but the slide logic uses groups of 3 for desktop, 1 for mobile
   const totalSlides = testimonials.length;
 
   const next = useCallback(() => {
+    setSlideDirection("right");
     setCurrentIndex((prev) => (prev + 1) % totalSlides);
   }, [totalSlides]);
 
   const prev = useCallback(() => {
+    setSlideDirection("left");
     setCurrentIndex((prev) => (prev - 1 + totalSlides) % totalSlides);
   }, [totalSlides]);
 
@@ -83,7 +85,6 @@ export default function TestimonialSlider() {
     return () => clearInterval(interval);
   }, [next, isHovered]);
 
-  // Get visible testimonials (3 for desktop, shown via CSS)
   const getVisibleTestimonials = () => {
     const items = [];
     for (let i = 0; i < 3; i++) {
@@ -97,12 +98,14 @@ export default function TestimonialSlider() {
   return (
     <section className="bg-bg-alt" style={{ padding: "var(--section-gap) 0" }}>
       <div className="mx-auto max-w-7xl px-6">
-        <h2 className="mb-4 text-center text-3xl font-bold text-heading md:text-4xl">
-          What Our Students Say
-        </h2>
-        <p className="mx-auto mb-12 max-w-2xl text-center text-body">
-          Hundreds of students have transformed their SAT scores with Catalyst. Here are some of their stories.
-        </p>
+        <AnimateOnScroll animation="fade-up">
+          <h2 className="mb-4 text-center text-3xl font-bold text-heading md:text-4xl">
+            What Our Students Say
+          </h2>
+          <p className="mx-auto mb-12 max-w-2xl text-center text-body">
+            Hundreds of students have transformed their SAT scores with Catalyst. Here are some of their stories.
+          </p>
+        </AnimateOnScroll>
 
         <div
           className="relative"
@@ -113,7 +116,7 @@ export default function TestimonialSlider() {
           <button
             onClick={prev}
             aria-label="Previous testimonial"
-            className="absolute -left-3 top-1/2 z-10 flex h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full bg-white shadow-md transition-colors hover:bg-green-light md:-left-5"
+            className="absolute -left-3 top-1/2 z-10 flex h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full bg-white shadow-md transition-all hover:bg-green-light hover:shadow-lg md:-left-5"
           >
             <svg className="h-5 w-5 text-green-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
               <path strokeLinecap="round" strokeLinejoin="round" d="M15 19l-7-7 7-7" />
@@ -122,24 +125,29 @@ export default function TestimonialSlider() {
 
           {/* Cards Container */}
           <div className="overflow-hidden px-4">
-            <div className="flex transition-transform duration-500 ease-in-out gap-6">
-              {/* Mobile: show 1 card, Desktop: show 3 cards */}
+            <div className="flex gap-6">
               {visible.map((t, i) => (
                 <div
                   key={`${currentIndex}-${i}`}
                   className={`w-full shrink-0 ${
                     i === 0 ? "block" : "hidden md:block"
-                  } md:w-[calc(33.333%-1rem)]`}
+                  } md:w-[calc(33.333%-1rem)] slider-slide-enter`}
+                  style={{
+                    animationDelay: `${i * 80}ms`,
+                    animationDirection: slideDirection === "left" ? "reverse" : "normal",
+                  }}
                 >
-                  <div className="flex h-full flex-col rounded-xl border border-gray-100 bg-white p-6 shadow-sm">
+                  <div className="flex h-full flex-col rounded-xl border border-gray-100 bg-white p-6 shadow-sm transition-shadow hover:shadow-md">
                     {/* Score Improvement */}
                     <div className="mb-4 text-center">
-                      <div className="flex items-center justify-center gap-2 text-sm text-body">
-                        <span className="font-medium">{t.before}</span>
-                        <span className="text-green-primary">&rarr;</span>
-                        <span className="font-medium">{t.after}</span>
+                      <div className="flex items-center justify-center gap-3 text-sm text-body">
+                        <span className="rounded-md bg-gray-100 px-2 py-1 font-medium">{t.before}</span>
+                        <svg className="h-4 w-4 text-green-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                          <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
+                        </svg>
+                        <span className="rounded-md bg-green-light px-2 py-1 font-bold text-green-primary">{t.after}</span>
                       </div>
-                      <p className="mt-1 text-2xl font-bold text-green-primary">
+                      <p className="mt-2 text-2xl font-bold text-green-primary">
                         +{t.after - t.before} points
                       </p>
                     </div>
@@ -175,7 +183,7 @@ export default function TestimonialSlider() {
           <button
             onClick={next}
             aria-label="Next testimonial"
-            className="absolute -right-3 top-1/2 z-10 flex h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full bg-white shadow-md transition-colors hover:bg-green-light md:-right-5"
+            className="absolute -right-3 top-1/2 z-10 flex h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full bg-white shadow-md transition-all hover:bg-green-light hover:shadow-lg md:-right-5"
           >
             <svg className="h-5 w-5 text-green-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
               <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
@@ -188,7 +196,10 @@ export default function TestimonialSlider() {
           {testimonials.map((_, i) => (
             <button
               key={i}
-              onClick={() => setCurrentIndex(i)}
+              onClick={() => {
+                setSlideDirection(i > currentIndex ? "right" : "left");
+                setCurrentIndex(i);
+              }}
               aria-label={`Go to testimonial ${i + 1}`}
               className={`h-2.5 rounded-full transition-all duration-300 ${
                 i === currentIndex
