@@ -188,7 +188,7 @@ export default function Hero() {
                                                                       </div>
                                                 </div>
                                             )}
-                          </>>
+                          </>
                         )}
                                             </div>
                                 </div>
@@ -196,4 +196,4 @@ export default function Hero() {
               </div>
         </section>
       );
-}</></section>
+}
