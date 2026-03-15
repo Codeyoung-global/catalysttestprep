@@ -1,20 +1,28 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 50" width="280" height="50">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 260 50" width="260" height="50">
   <defs>
     <linearGradient id="iconGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#7CB886" />
-      <stop offset="100%" stop-color="#2D6A4F" />
+      <stop offset="0%" stop-color="#8BC896" />
+      <stop offset="100%" stop-color="#5A9E6B" />
+    </linearGradient>
+    <linearGradient id="iconShadow" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="rgba(0,0,0,0)" />
+      <stop offset="100%" stop-color="rgba(0,0,0,0.15)" />
     </linearGradient>
   </defs>
 
-  <!-- Rounded square background -->
+  <!-- Rounded square background with subtle 3D effect -->
   <rect x="2" y="5" width="40" height="40" rx="10" ry="10" fill="url(#iconGrad)" />
+  <rect x="2" y="5" width="40" height="40" rx="10" ry="10" fill="url(#iconShadow)" />
 
-  <!-- Upward chevron/arrow -->
-  <polyline points="14,30 22,16 30,30" fill="none" stroke="#90EE90" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" />
+  <!-- Upward chevron/arrow (house roof shape) -->
+  <polyline points="14,30 22,17 30,30" fill="none" stroke="#C8F0D0" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" />
 
-  <!-- Small semi-circle at bottom -->
-  <path d="M 18,35 A 4,4 0 0 1 26,35" fill="none" stroke="#90EE90" stroke-width="2.5" stroke-linecap="round" />
+  <!-- Small semi-circle at bottom (door) -->
+  <path d="M 18,34 A 4,4 0 0 1 26,34" fill="none" stroke="#C8F0D0" stroke-width="2.5" stroke-linecap="round" />
 
   <!-- "Catalyst" text -->
-  <text x="52" y="34" font-family="'Inter', 'Helvetica Neue', Arial, sans-serif" font-size="28" font-weight="700" fill="#1a1a1a">Catalyst</text>
+  <text x="52" y="35" font-family="'Inter', 'Helvetica Neue', Arial, sans-serif" font-size="28" font-weight="600" fill="#1a1a1a" letter-spacing="-0.5">Catalyst</text>
+
+  <!-- Copyright symbol -->
+  <text x="186" y="22" font-family="'Inter', 'Helvetica Neue', Arial, sans-serif" font-size="13" font-weight="400" fill="#1a1a1a">&#169;</text>
 </svg>
