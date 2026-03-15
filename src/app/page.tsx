@@ -2,14 +2,16 @@ import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
 import IntroParagraph from "@/components/IntroParagraph";
 import TrialBenefits from "@/components/TrialBenefits";
-import Testimonials from "@/components/Testimonials";
+import TestimonialSlider from "@/components/TestimonialSlider";
 import GettingStarted from "@/components/GettingStarted";
 import WhyCatalyst from "@/components/WhyCatalyst";
 import MeetTutors from "@/components/MeetTutors";
 import Methodology from "@/components/Methodology";
-import GuaranteeBar from "@/components/GuaranteeBar";
+import ScoreGuarantee from "@/components/ScoreGuarantee";
+import ClassGlimpse from "@/components/ClassGlimpse";
+import WhatsAppCTA from "@/components/WhatsAppCTA";
+import BookDiagnosticCTA from "@/components/BookDiagnosticCTA";
 import Pricing from "@/components/Pricing";
-import PoweredBy from "@/components/PoweredBy";
 import FAQ from "@/components/FAQ";
 import BottomCTA from "@/components/BottomCTA";
 import Footer from "@/components/Footer";
@@ -102,14 +104,16 @@ export default function Home() {
       <Hero />
       <IntroParagraph />
       <TrialBenefits />
-      <Testimonials />
+      <TestimonialSlider />
       <GettingStarted />
       <WhyCatalyst />
+      <ScoreGuarantee />
       <MeetTutors />
+      <ClassGlimpse />
       <Methodology />
-      <GuaranteeBar />
+      <BookDiagnosticCTA />
       <Pricing />
-      <PoweredBy />
+      <WhatsAppCTA />
       <FAQ />
       <BottomCTA />
       <Footer />
