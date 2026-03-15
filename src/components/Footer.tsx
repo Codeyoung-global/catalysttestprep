@@ -10,7 +10,7 @@ export default function Footer() {
           <div>
             <Link href="/" className="inline-block">
               <Image
-                src="/images/catalyst-logo.svg"
+                src="/images/Catalyst_logo3.svg"
                 alt="Catalyst Test Prep"
                 width={160}
                 height={36}

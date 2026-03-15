@@ -21,7 +21,7 @@ export default function Navbar() {
         {/* Logo */}
         <Link href="/" className="flex-shrink-0">
           <Image
-            src="/images/catalyst-logo.svg"
+            src="/images/Catalyst_logo3.svg"
             alt="Catalyst Test Prep"
             width={200}
             height={36}
