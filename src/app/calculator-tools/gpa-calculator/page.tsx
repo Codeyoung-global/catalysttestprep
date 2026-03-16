@@ -50,10 +50,10 @@ const defaultCourse = (id: number): Course => ({
 
 function encouragingMessage(gpa: number): string {
   if (gpa >= 3.9) return "Dean's List material! You're absolutely crushing it!";
-  if (gpa >= 3.5) return "Outstanding work — keep riding that momentum!";
+  if (gpa >= 3.5) return "Outstanding work! Keep riding that momentum!";
   if (gpa >= 3.0) return "Solid performance! You're on a great track.";
-  if (gpa >= 2.5) return "Good foundation — a few tweaks and you'll soar!";
-  if (gpa >= 2.0) return "Room to grow — and that's totally okay. Let's build a plan!";
+  if (gpa >= 2.5) return "Good foundation. A few tweaks and you'll soar!";
+  if (gpa >= 2.0) return "Room to grow, and that's totally okay. Let's build a plan!";
   return "Every expert was once a beginner. Let's turn things around together!";
 }
 
@@ -169,7 +169,7 @@ export default function GpaCalculatorPage() {
             GPA Calculator
           </h1>
           <p className="text-lg text-gray-300 md:text-xl">
-            Crunch the numbers in seconds — find out exactly where you stand and
+            Crunch the numbers in seconds. Find out exactly where you stand and
             how to level up your GPA.
           </p>
         </div>
@@ -310,7 +310,7 @@ export default function GpaCalculatorPage() {
       <section className="bg-bg-alt py-16">
         <div className="mx-auto max-w-4xl px-6">
           <h2 className="mb-6 text-center text-3xl font-bold text-heading">
-            Weighted vs. Unweighted GPA &mdash; What&rsquo;s the Difference?
+            Weighted vs. Unweighted GPA : What&rsquo;s the Difference?
           </h2>
 
           <div className="grid gap-8 md:grid-cols-2">
@@ -319,7 +319,7 @@ export default function GpaCalculatorPage() {
                 Unweighted GPA
               </h3>
               <p className="leading-relaxed text-body">
-                The classic 4.0 scale. Every class is treated equally &mdash; whether
+                The classic 4.0 scale. Every class is treated equally. Whether
                 it&rsquo;s Art History or AP Calculus. Most colleges look at this
                 number first, so it&rsquo;s a great baseline to know.
               </p>
@@ -355,7 +355,7 @@ export default function GpaCalculatorPage() {
               },
               {
                 title: "Ask for help early",
-                body: "Teachers and tutors are there to help — don't wait until the night before the final. A quick office-hours visit can clear up weeks of confusion.",
+                body: "Teachers and tutors are there to help. Don't wait until the night before the final. A quick office-hours visit can clear up weeks of confusion.",
               },
               {
                 title: "Challenge yourself wisely",
@@ -393,7 +393,7 @@ export default function GpaCalculatorPage() {
           <p className="mb-8 text-lg text-gray-300">
             Our expert tutors build a personalized study plan around{" "}
             <em>your</em> strengths and goals. Book a free diagnostic session
-            and let&rsquo;s map out your path to a stronger GPA &mdash; together.
+            and let&rsquo;s map out your path to a stronger GPA  - together.
           </p>
           <a
             href="/book-diagnostic"

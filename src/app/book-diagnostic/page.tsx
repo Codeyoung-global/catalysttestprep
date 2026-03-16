@@ -46,7 +46,7 @@ export default function BookDiagnosticPage() {
             <p className="mx-auto max-w-2xl text-base text-gray-300 sm:text-lg">
               Our comprehensive diagnostic pinpoints your exact strengths and
               weaknesses, giving you a clear roadmap to your target score. It
-              takes about 90 minutes and is completely free&mdash;no strings
+              takes about 90 minutes and is completely free - no strings
               attached.
             </p>
           </AnimateOnScroll>

@@ -21,7 +21,7 @@ export default function SelfPacedClassesPage() {
           <p className="mx-auto max-w-2xl text-lg text-gray-300">
             Study on your schedule with our comprehensive library of video
             lessons, full-length practice tests, and AI-powered analytics that
-            adapt to your performance&mdash;all at a fraction of the cost of
+            adapt to your performance - all at a fraction of the cost of
             private tutoring.
           </p>
         </div>

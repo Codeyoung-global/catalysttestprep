@@ -21,7 +21,7 @@ export default function PersonalisedClassesPage() {
           <p className="mx-auto max-w-2xl text-lg text-gray-300">
             The most effective way to prepare. Your own dedicated tutor builds a
             custom curriculum around your strengths, weaknesses, and target
-            score&mdash;so every session moves you closer to your goal.
+            score - so every session moves you closer to your goal.
           </p>
         </div>
       </section>
@@ -90,7 +90,7 @@ export default function PersonalisedClassesPage() {
               },
               {
                 title: "Flexible Scheduling",
-                desc: "Book sessions when it suits you&mdash;evenings, weekends, or between activities.",
+                desc: "Book sessions when it suits you - evenings, weekends, or between activities.",
               },
               {
                 title: "Accountability Partner",
@@ -164,7 +164,7 @@ export default function PersonalisedClassesPage() {
           <blockquote className="mb-6 text-xl italic text-heading md:text-2xl">
             &ldquo;My tutor knew exactly where I was struggling before I even
             said a word. In 10 weeks my SAT score went from 1180 to 1460.
-            Catalyst didn&rsquo;t just raise my score&mdash;it changed how I
+            Catalyst didn&rsquo;t just raise my score - it changed how I
             approach learning.&rdquo;
           </blockquote>
           <p className="font-semibold text-heading">Priya S.</p>
@@ -182,7 +182,7 @@ export default function PersonalisedClassesPage() {
           </h2>
           <p className="mb-8 text-gray-300">
             See where you stand and get a custom plan to reach your target
-            score&mdash;all for free.
+            score - all for free.
           </p>
           <a
             href="/book-diagnostic"

@@ -71,7 +71,7 @@ export default function TrialBenefits() {
               </svg>
               <div>
                 <p className="text-xl font-bold text-heading md:text-2xl">
-                  Score 1400+ in SAT or Add 150 Points — Guaranteed, or Your Money Back
+                  Score 1400+ in SAT or Add 150 Points - Guaranteed, or Your Money Back
                 </p>
                 <p className="mt-1 text-sm text-caption">Based on your starting score</p>
               </div>

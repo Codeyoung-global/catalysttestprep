@@ -58,7 +58,7 @@ export default function Hero() {
                                 <div className="flex-1 lg:max-w-[55%]">
                                             <h1 className="animate-fade-in-up text-4xl font-bold leading-tight text-heading md:text-5xl" style={{ maxWidth: "600px" }}>
                                                           1-on-1 Online SAT Prep That Adds 150+ Points{" "}
-                                                          <span className="text-gradient-green">— Guaranteed</span>
+                                                          <span className="text-gradient-green">- Guaranteed</span>
                                             </h1>
                                             <p className="animate-fade-in-up delay-200 mt-6 text-lg text-body md:text-xl" style={{ maxWidth: "540px" }}>
                                                           Live sessions with Ivy-level tutors. A proprietary AI-powered curriculum. And a money-back guarantee if you don&apos;t hit your target score.

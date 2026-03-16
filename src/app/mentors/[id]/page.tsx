@@ -19,7 +19,7 @@ export async function generateMetadata({ params }: MentorPageProps) {
   if (!mentor) return { title: "Mentor Not Found | Catalyst Test Prep" };
 
   return {
-    title: `${mentor.name} — ${mentor.specialty} Mentor | Catalyst Test Prep`,
+    title: `${mentor.name} | ${mentor.specialty} Mentor | Catalyst Test Prep`,
     description: mentor.bio,
   };
 }

@@ -38,7 +38,7 @@ const tutors: Tutor[] = [
     reviews: [
       { author: "Aiden K.", text: "Sarah's method for tackling grid-in questions was a game-changer. Went from 620 to 760 in math!", rating: 5 },
       { author: "Priya R.", text: "Super patient and explains every step. Highly recommend for anyone struggling with the math section.", rating: 5 },
-      { author: "Tom W.", text: "Got a 1530 after 8 sessions — couldn't have done it without her.", rating: 5 },
+      { author: "Tom W.", text: "Got a 1530 after 8 sessions. Couldn't have done it without her.", rating: 5 },
     ],
   },
   {
@@ -118,7 +118,7 @@ const tutors: Tutor[] = [
     reviews: [
       { author: "Ben T.", text: "Jessica is a genius. I didn't think I could ever solve those hard math problems, but now I can.", rating: 5 },
       { author: "Sara N.", text: "Her speed tricks for multiple choice are incredible. Saved so much time on the test.", rating: 5 },
-      { author: "Omar F.", text: "Perfect score on math section — couldn't have done it without her.", rating: 5 },
+      { author: "Omar F.", text: "Perfect score on math section. Couldn't have done it without her.", rating: 5 },
     ],
   },
 ];

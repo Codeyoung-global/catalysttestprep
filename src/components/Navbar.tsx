@@ -67,7 +67,7 @@ export default function Navbar() {
             Pricing
           </a>
           <a
-            href="https://blog.catalysttestprep.com"
+            href="https://www.catalysttestprep.com/blog"
             target="_blank"
             rel="noopener noreferrer"
             className="text-sm font-medium text-body transition-colors hover:text-green-primary"
@@ -157,7 +157,7 @@ export default function Navbar() {
               Pricing
             </a>
             <a
-              href="https://blog.catalysttestprep.com"
+              href="https://www.catalysttestprep.com/blog"
               target="_blank"
               rel="noopener noreferrer"
               className="text-sm font-medium text-body"

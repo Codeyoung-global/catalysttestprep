@@ -195,7 +195,7 @@ export default function PricingPage() {
             </h2>
             <p className="mx-auto mb-10 max-w-2xl text-center text-body">
               Access our full library of video lessons, practice tests, and AI
-              analytics&mdash;no tutor required.
+              analytics - no tutor required.
             </p>
           </AnimateOnScroll>
           <div className="grid gap-6 sm:grid-cols-3">

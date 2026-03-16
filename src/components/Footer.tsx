@@ -42,7 +42,7 @@ export default function Footer() {
               <li><Link href="/about" className="text-sm text-gray-300 hover:text-white transition-colors">About Us</Link></li>
               <li><Link href="/mentors" className="text-sm text-gray-300 hover:text-white transition-colors">Our Mentors</Link></li>
               <li><Link href="/pricing" className="text-sm text-gray-300 hover:text-white transition-colors">Pricing</Link></li>
-              <li><a href="https://blog.catalysttestprep.com" target="_blank" rel="noopener noreferrer" className="text-sm text-gray-300 hover:text-white transition-colors">Blog</a></li>
+              <li><a href="https://www.catalysttestprep.com/blog" target="_blank" rel="noopener noreferrer" className="text-sm text-gray-300 hover:text-white transition-colors">Blog</a></li>
               <li><Link href="/book-diagnostic" className="text-sm text-gray-300 hover:text-white transition-colors">Book a Diagnostic</Link></li>
             </ul>
           </div>

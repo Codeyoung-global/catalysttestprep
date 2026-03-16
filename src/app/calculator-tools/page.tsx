@@ -60,7 +60,7 @@ const calculators = [
   },
   {
     title: "GPA Calculator",
-    description: "Calculate your weighted and unweighted GPA. Add courses, grades, and credits \u2014 see your cumulative GPA instantly.",
+    description: "Calculate your weighted and unweighted GPA. Add courses, grades, and credits - see your cumulative GPA instantly.",
     href: "/calculator-tools/gpa-calculator",
     external: false,
     icon: (
@@ -125,7 +125,7 @@ export default function CalculatorToolsPage() {
           <AnimateOnScroll animation="fade-up" delay={200}>
             <p className="mx-auto mt-6 max-w-3xl text-base text-gray-300 sm:text-lg">
               Crunch numbers, not stress. Use our free calculators to estimate your test scores,
-              check National Merit eligibility, predict AP results, and track your GPA — all in seconds.
+              check National Merit eligibility, predict AP results, and track your GPA, all in seconds.
             </p>
           </AnimateOnScroll>
         </div>
@@ -185,7 +185,7 @@ export default function CalculatorToolsPage() {
               Why Students Love Our Calculators
             </h2>
             <p className="mx-auto mb-12 max-w-2xl text-center text-body">
-              Built by test prep experts, these tools give you a clear picture of where you stand — so you can focus your energy on what matters most.
+              Built by test prep experts, these tools give you a clear picture of where you stand, so you can focus your energy on what matters most.
             </p>
           </AnimateOnScroll>
 
@@ -213,7 +213,7 @@ export default function CalculatorToolsPage() {
               Want a Personalized Score Improvement Plan?
             </h2>
             <p className="mx-auto mt-4 max-w-2xl text-base text-green-100 sm:text-lg">
-              Our calculators give you the numbers — our expert tutors turn those numbers into results.
+              Our calculators give you the numbers. Our expert tutors turn those numbers into results.
               Book a free diagnostic to get a custom study plan built around your goals.
             </p>
           </AnimateOnScroll>

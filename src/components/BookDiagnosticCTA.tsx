@@ -19,7 +19,7 @@ export default function BookDiagnosticCTA() {
           </h2>
           <p className="mx-auto mb-10 max-w-2xl text-lg text-gray-300">
             Book a free diagnostic test and get a clear picture of your SAT
-            readiness &mdash; no commitment required.
+            readiness - no commitment required.
           </p>
         </AnimateOnScroll>
 

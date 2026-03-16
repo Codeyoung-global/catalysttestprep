@@ -24,7 +24,7 @@ export default function MentorsPage() {
               Every Catalyst mentor scored in the{" "}
               <span className="font-semibold text-green-primary">99th percentile</span> on
               the SAT and graduated from a top university. They don&apos;t just know the
-              material &mdash; they know how to teach it.
+              material. They know how to teach it.
             </p>
             <p className="mx-auto max-w-xl text-center text-sm text-caption">
               Click on any mentor to learn more about their background, teaching style, and

@@ -207,15 +207,15 @@ function scoreLabel(score: number): string {
 function encouragingMessage(score: number): string {
   switch (score) {
     case 5:
-      return "Amazing work! A 5 is the highest score possible \u2014 colleges will be impressed. Keep doing what you\u2019re doing!";
+      return "Amazing work! A 5 is the highest score possible - colleges will be impressed. Keep doing what you\u2019re doing!";
     case 4:
-      return "Fantastic job! A 4 shows strong mastery of the material. Many colleges award credit for this score \u2014 you\u2019re in great shape!";
+      return "Fantastic job! A 4 shows strong mastery of the material. Many colleges award credit for this score - you\u2019re in great shape!";
     case 3:
       return "Solid effort! A 3 is considered passing and many colleges accept it for credit. With a little more practice, a 4 or 5 is totally within reach!";
     case 2:
       return "You\u2019re building a good foundation! With focused review on your weak spots, you can absolutely bump this up. Don\u2019t give up!";
     default:
-      return "Every expert started somewhere. This is your baseline \u2014 now let\u2019s build a game plan to improve. You\u2019ve got this!";
+      return "Every expert started somewhere. This is your baseline - now let\u2019s build a game plan to improve. You\u2019ve got this!";
   }
 }
 
@@ -420,7 +420,7 @@ export default function ApScoreCalculatorPage() {
           </h1>
           <p className="text-lg text-gray-300 md:text-xl">
             Wondering how you did on your AP exam? Plug in your scores and get an
-            instant prediction &mdash; then find out exactly how to level up.
+            instant prediction - then find out exactly how to level up.
           </p>
         </div>
       </section>
@@ -683,7 +683,7 @@ export default function ApScoreCalculatorPage() {
               },
               {
                 title: "Take full-length practice exams",
-                body: "Simulating real test conditions \u2014 timed, no distractions \u2014 is the single best way to build stamina and identify weak spots.",
+                body: "Simulating real test conditions - timed, no distractions - is the single best way to build stamina and identify weak spots.",
               },
               {
                 title: "Master the free-response format",
@@ -691,7 +691,7 @@ export default function ApScoreCalculatorPage() {
               },
               {
                 title: "Review mistakes, not just answers",
-                body: "When you get a practice question wrong, don\u2019t just read the correct answer. Understand \u2014why\u2014 you missed it and what concept you need to revisit.",
+                body: "When you get a practice question wrong, don\u2019t just read the correct answer. Understand why you missed it and what concept you need to revisit.",
               },
               {
                 title: "Use official College Board resources",

@@ -78,7 +78,7 @@ export default function AboutPage() {
               At Catalyst Test Prep, our mission is to democratize access to
               world-class test preparation. We combine the expertise of
               Ivy-League-educated tutors with cutting-edge AI technology to
-              deliver a truly personalized learning experience&mdash;one that
+              deliver a truly personalized learning experience - one that
               adapts to each student&rsquo;s unique strengths, weaknesses, and
               goals. We don&rsquo;t just teach to the test; we build the
               critical thinking skills students need to excel in college and
@@ -107,7 +107,7 @@ export default function AboutPage() {
                   students had already mastered.
                 </p>
                 <p className="mb-4 text-body">
-                  We set out to build something better&mdash;a platform where
+                  We set out to build something better - a platform where
                   every lesson is tailored to the individual, every practice
                   problem is selected with purpose, and every student is
                   supported by a mentor who genuinely cares about their success.
@@ -131,7 +131,7 @@ export default function AboutPage() {
                     "1:1 sessions with 99th-percentile tutors",
                     "Score improvement guarantee or money back",
                     "Flexible scheduling that fits your life",
-                    "Holistic approach\u2014skills, strategy & confidence",
+                    "Holistic approach - skills, strategy & confidence",
                   ].map((item) => (
                     <li key={item} className="flex items-start gap-2">
                       <svg className="mt-0.5 h-5 w-5 shrink-0 text-green-primary" fill="currentColor" viewBox="0 0 20 20">
@@ -147,15 +147,57 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Values */}
+      {/* Founders */}
       <section className="bg-white py-16">
+        <div className="mx-auto max-w-5xl px-6">
+          <AnimateOnScroll animation="fade-up">
+            <h2 className="mb-4 text-center text-3xl font-bold text-heading">
+              Meet Our Founders
+            </h2>
+            <p className="mx-auto mb-12 max-w-2xl text-center text-body">
+              The visionaries behind Catalyst Test Prep, driven by a shared passion for transforming education.
+            </p>
+          </AnimateOnScroll>
+          <div className="grid gap-10 md:grid-cols-2">
+            <AnimateOnScroll animation="slide-left" delay={100}>
+              <div className="flex flex-col items-center rounded-2xl border border-gray-100 bg-white p-8 text-center shadow-sm">
+                <div className="mb-4 flex h-24 w-24 items-center justify-center rounded-full bg-green-light">
+                  <span className="text-3xl font-bold text-green-primary">RT</span>
+                </div>
+                <h3 className="text-xl font-bold text-heading">Rupika Taneja</h3>
+                <p className="mt-1 text-sm font-semibold text-green-primary">Co-Founder &amp; COO</p>
+                <p className="mt-1 text-sm text-caption">IIT Delhi Alumna</p>
+                <p className="mt-4 text-sm leading-relaxed text-body">
+                  Rupika is a passionate advocate for nurturing creativity and potential in every student. With her background in engineering from IIT Delhi and deep experience in ed-tech, she leads operations at Catalyst Test Prep with a student-first mindset. She believes that when innate talent is properly guided, students don&rsquo;t just improve scores - they become confident, independent learners ready to take on the world.
+                </p>
+              </div>
+            </AnimateOnScroll>
+            <AnimateOnScroll animation="slide-right" delay={100}>
+              <div className="flex flex-col items-center rounded-2xl border border-gray-100 bg-white p-8 text-center shadow-sm">
+                <div className="mb-4 flex h-24 w-24 items-center justify-center rounded-full bg-green-light">
+                  <span className="text-3xl font-bold text-green-primary">SD</span>
+                </div>
+                <h3 className="text-xl font-bold text-heading">Shailendra Dhakad</h3>
+                <p className="mt-1 text-sm font-semibold text-green-primary">Co-Founder &amp; CEO</p>
+                <p className="mt-1 text-sm text-caption">IIT Delhi Alumnus</p>
+                <p className="mt-4 text-sm leading-relaxed text-body">
+                  Shailendra envisions education as a transformative force that empowers students to achieve what they once thought impossible. An IIT Delhi graduate with a deep understanding of technology and learning systems, he drives the vision and strategy at Catalyst Test Prep. His focus on data-driven, personalized learning ensures that every student receives the targeted support they need to reach their dream score.
+                </p>
+              </div>
+            </AnimateOnScroll>
+          </div>
+        </div>
+      </section>
+
+      {/* Values */}
+      <section className="bg-bg-alt py-16">
         <div className="mx-auto max-w-5xl px-6">
           <AnimateOnScroll animation="fade-up">
             <h2 className="mb-4 text-center text-3xl font-bold text-heading">
               Our Values
             </h2>
             <p className="mx-auto mb-12 max-w-2xl text-center text-body">
-              These principles guide everything we do&mdash;from how we hire
+              These principles guide everything we do - from how we hire
               tutors to how we design our curriculum.
             </p>
           </AnimateOnScroll>

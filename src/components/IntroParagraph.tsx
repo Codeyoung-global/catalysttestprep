@@ -15,7 +15,7 @@ export default function IntroParagraph() {
           <p className="text-base leading-relaxed text-body md:text-lg">
             Catalyst Test Prep matches every student with a dedicated, Ivy-level tutor and a
             smart AI-powered curriculum that adapts to <em>you</em>. Our structured diagnostic
-            approach pinpoints your exact strengths and growth areas — so every session moves
+            approach pinpoints your exact strengths and growth areas, so every session moves
             the needle. And yes, we put our money where our mouth is:
           </p>
         </AnimateOnScroll>
@@ -25,7 +25,7 @@ export default function IntroParagraph() {
               <path strokeLinecap="round" strokeLinejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
             </svg>
             <span className="text-base font-bold text-green-primary md:text-lg">
-              1400+ SAT or 150+ point boost — guaranteed, or your money back
+              1400+ SAT or 150+ point boost, guaranteed, or your money back
             </span>
           </div>
         </AnimateOnScroll>

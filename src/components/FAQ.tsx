@@ -47,7 +47,7 @@ export default function FAQ() {
     <section className="bg-white" style={{ padding: "var(--section-gap) 0" }} id="faq">
       <div className="mx-auto max-w-3xl px-6">
         <h2 className="mb-4 text-center text-3xl font-bold text-heading md:text-4xl">
-          SAT Prep FAQs — Common Questions About Catalyst Test Prep
+          SAT Prep FAQs: Common Questions About Catalyst Test Prep
         </h2>
         <p className="mx-auto mb-12 max-w-2xl text-center text-body">
           Find answers to the most common questions about our SAT prep programs, tutors, and guarantee.

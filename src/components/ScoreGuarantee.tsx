@@ -58,7 +58,7 @@ export default function ScoreGuarantee() {
             We&apos;re so confident in our program that we back every student with a
             score guarantee. Hit <strong className="text-heading">1400+ on the SAT</strong> or
             improve by <strong className="text-heading">150+ points</strong> from your
-            diagnostic &mdash; or get your money back.
+            diagnostic - or get your money back.
           </p>
         </AnimateOnScroll>
 

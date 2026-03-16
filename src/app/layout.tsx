@@ -2,11 +2,11 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Catalyst Test Prep | 1-on-1 SAT Prep — 150+ Point Guarantee",
+  title: "Catalyst Test Prep | 1-on-1 SAT Prep | 150+ Point Guarantee",
   description:
     "Get personalized 1-on-1 SAT prep with Ivy-level tutors. Add 150+ points guaranteed or your money back. Book a free trial class today.",
   openGraph: {
-    title: "Catalyst Test Prep | 1-on-1 SAT Prep — 150+ Point Guarantee",
+    title: "Catalyst Test Prep | 1-on-1 SAT Prep | 150+ Point Guarantee",
     description:
       "Get personalized 1-on-1 SAT prep with Ivy-level tutors. Add 150+ points guaranteed or your money back. Book a free trial class today.",
     type: "website",
@@ -15,7 +15,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Catalyst Test Prep | 1-on-1 SAT Prep — 150+ Point Guarantee",
+    title: "Catalyst Test Prep | 1-on-1 SAT Prep | 150+ Point Guarantee",
     description:
       "Get personalized 1-on-1 SAT prep with Ivy-level tutors. Add 150+ points guaranteed or your money back.",
   },
