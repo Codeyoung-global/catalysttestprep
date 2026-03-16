@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import Navbar from "@/components/Navbar";
@@ -19,7 +20,7 @@ export async function generateMetadata({ params }: MentorPageProps) {
   if (!mentor) return { title: "Mentor Not Found | Catalyst Test Prep" };
 
   return {
-    title: `${mentor.name} | ${mentor.specialty} Mentor | Catalyst Test Prep`,
+    title: `${mentor.name} | Mentor | Catalyst Test Prep`,
     description: mentor.bio,
   };
 }
@@ -28,6 +29,21 @@ export default async function MentorProfilePage({ params }: MentorPageProps) {
   const { id } = await params;
   const mentor = mentors.find((m) => m.id === id);
   if (!mentor) notFound();
+
+  const stats = [
+    mentor.experience != null && {
+      label: "Years Experience",
+      value: `${mentor.experience}+`,
+    },
+    mentor.classesTaken != null && {
+      label: "Classes Taken",
+      value: mentor.classesTaken.toLocaleString() + "+",
+    },
+    mentor.studentsTaught != null && {
+      label: "Students Taught",
+      value: mentor.studentsTaught.toLocaleString() + "+",
+    },
+  ].filter(Boolean) as { label: string; value: string }[];
 
   return (
     <>
@@ -51,84 +67,77 @@ export default async function MentorProfilePage({ params }: MentorPageProps) {
           {/* Profile Header */}
           <AnimateOnScroll animation="fade-up" delay={100}>
             <div className="flex flex-col items-center gap-6 md:flex-row md:items-start">
-              <div className="flex h-28 w-28 shrink-0 items-center justify-center rounded-full bg-green-light sm:h-36 sm:w-36">
-                <span className="text-4xl font-bold text-green-primary sm:text-5xl">
-                  {mentor.initials}
-                </span>
-              </div>
+              {mentor.profilePicture ? (
+                <div className="h-28 w-28 shrink-0 overflow-hidden rounded-full sm:h-36 sm:w-36">
+                  <Image
+                    src={mentor.profilePicture}
+                    alt={mentor.name}
+                    width={144}
+                    height={144}
+                    className="h-full w-full object-cover"
+                  />
+                </div>
+              ) : (
+                <div className="flex h-28 w-28 shrink-0 items-center justify-center rounded-full bg-green-light sm:h-36 sm:w-36">
+                  <span className="text-4xl font-bold text-green-primary sm:text-5xl">
+                    {mentor.initials}
+                  </span>
+                </div>
+              )}
 
               <div className="text-center md:text-left">
                 <h1 className="text-2xl font-bold text-heading sm:text-3xl md:text-4xl">
                   {mentor.name}
                 </h1>
-                <p className="mt-1 text-base text-body sm:text-lg">{mentor.university}</p>
-                <p className="text-sm text-caption sm:text-base">{mentor.degree}</p>
+                {mentor.university && (
+                  <p className="mt-1 text-base text-body sm:text-lg">{mentor.university}</p>
+                )}
+                {mentor.degree && (
+                  <p className="text-sm text-caption sm:text-base">{mentor.degree}</p>
+                )}
 
                 <div className="mt-4 flex flex-wrap items-center justify-center gap-3 md:justify-start">
-                  <span className="rounded-full bg-green-light px-4 py-1.5 text-sm font-bold text-green-primary">
-                    {mentor.satScore} SAT
-                  </span>
-                  <span className="rounded-full bg-green-light px-4 py-1.5 text-sm font-semibold text-green-primary">
-                    {mentor.experience} {mentor.experience === 1 ? "year" : "years"} experience
-                  </span>
-                  <span className="rounded-full bg-green-light px-4 py-1.5 text-sm font-semibold text-green-primary">
-                    {mentor.specialty}
-                  </span>
+                  {mentor.languages.length > 0 && (
+                    <span className="rounded-full bg-green-light px-4 py-1.5 text-sm font-semibold text-green-primary">
+                      {mentor.languages.join(", ")}
+                    </span>
+                  )}
                 </div>
               </div>
             </div>
           </AnimateOnScroll>
 
+          {/* Stats */}
+          {stats.length > 0 && (
+            <AnimateOnScroll animation="fade-up" delay={150}>
+              <div className="mt-8 grid grid-cols-2 gap-4 sm:grid-cols-3">
+                {stats.map((stat) => (
+                  <div
+                    key={stat.label}
+                    className="rounded-xl bg-green-light p-4 text-center"
+                  >
+                    <p className="text-2xl font-bold text-green-primary">
+                      {stat.value}
+                    </p>
+                    <p className="text-sm text-caption">{stat.label}</p>
+                  </div>
+                ))}
+              </div>
+            </AnimateOnScroll>
+          )}
+
           {/* Bio */}
           <AnimateOnScroll animation="fade-up" delay={200}>
             <div className="mt-10">
-              <h2 className="mb-3 text-xl font-bold text-heading">About {mentor.name.split(" ")[0]}</h2>
+              <h2 className="mb-3 text-xl font-bold text-heading">
+                About {mentor.name.split(" ")[0]}
+              </h2>
               <p className="text-base leading-relaxed text-body">{mentor.bio}</p>
             </div>
           </AnimateOnScroll>
 
-          {/* Teaching Style */}
-          <AnimateOnScroll animation="fade-up" delay={250}>
-            <div className="mt-8">
-              <h2 className="mb-3 text-xl font-bold text-heading">Teaching Style</h2>
-              <p className="text-base leading-relaxed text-body">{mentor.teachingStyle}</p>
-            </div>
-          </AnimateOnScroll>
-
-          {/* Subjects */}
-          <AnimateOnScroll animation="fade-up" delay={300}>
-            <div className="mt-8">
-              <h2 className="mb-3 text-xl font-bold text-heading">Subjects</h2>
-              <div className="flex flex-wrap gap-2">
-                {mentor.subjects.map((subject) => (
-                  <span
-                    key={subject}
-                    className="rounded-lg border border-green-primary/20 bg-green-light px-3 py-1.5 text-sm font-medium text-green-primary"
-                  >
-                    {subject}
-                  </span>
-                ))}
-              </div>
-            </div>
-          </AnimateOnScroll>
-
-          {/* Fun Facts */}
-          <AnimateOnScroll animation="fade-up" delay={350}>
-            <div className="mt-8">
-              <h2 className="mb-3 text-xl font-bold text-heading">Fun Facts</h2>
-              <ul className="space-y-2">
-                {mentor.funFacts.map((fact, i) => (
-                  <li key={i} className="flex items-start gap-2 text-base text-body">
-                    <span className="mt-1.5 block h-2 w-2 shrink-0 rounded-full bg-green-primary" />
-                    {fact}
-                  </li>
-                ))}
-              </ul>
-            </div>
-          </AnimateOnScroll>
-
           {/* CTA */}
-          <AnimateOnScroll animation="fade-up" delay={400}>
+          <AnimateOnScroll animation="fade-up" delay={300}>
             <div className="mt-12 rounded-xl bg-bg-alt p-6 text-center sm:p-8">
               <h2 className="mb-2 text-2xl font-bold text-heading">
                 Book a Session with {mentor.name.split(" ")[0]}

@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
@@ -21,14 +22,17 @@ export default function MentorsPage() {
           </AnimateOnScroll>
           <AnimateOnScroll animation="fade-up" delay={100}>
             <p className="mx-auto mb-4 max-w-2xl text-center text-base text-body sm:text-lg">
-              Every Catalyst mentor scored in the{" "}
-              <span className="font-semibold text-green-primary">99th percentile</span> on
-              the SAT and graduated from a top university. They don&apos;t just know the
-              material. They know how to teach it.
+              Our mentors are experienced educators from top universities, each
+              bringing years of{" "}
+              <span className="font-semibold text-green-primary">
+                personalized 1:1 teaching
+              </span>{" "}
+              expertise. They don&apos;t just know the material - they know how
+              to teach it.
             </p>
             <p className="mx-auto max-w-xl text-center text-sm text-caption">
-              Click on any mentor to learn more about their background, teaching style, and
-              the subjects they cover.
+              Click on any mentor to learn more about their background and
+              experience.
             </p>
           </AnimateOnScroll>
         </div>
@@ -45,26 +49,50 @@ export default function MentorsPage() {
                   className="group flex h-full flex-col items-center rounded-xl bg-white p-6 text-center shadow-sm transition-all hover:shadow-lg hover:border-green-primary"
                 >
                   {/* Avatar */}
-                  <div className="mb-4 flex h-20 w-20 items-center justify-center rounded-full bg-green-light transition-all group-hover:bg-green-primary sm:h-24 sm:w-24">
-                    <span className="text-xl font-bold text-green-primary transition-colors group-hover:text-white sm:text-2xl">
-                      {mentor.initials}
-                    </span>
-                  </div>
+                  {mentor.profilePicture ? (
+                    <div className="mb-4 h-20 w-20 overflow-hidden rounded-full sm:h-24 sm:w-24">
+                      <Image
+                        src={mentor.profilePicture}
+                        alt={mentor.name}
+                        width={96}
+                        height={96}
+                        className="h-full w-full object-cover"
+                      />
+                    </div>
+                  ) : (
+                    <div className="mb-4 flex h-20 w-20 items-center justify-center rounded-full bg-green-light transition-all group-hover:bg-green-primary sm:h-24 sm:w-24">
+                      <span className="text-xl font-bold text-green-primary transition-colors group-hover:text-white sm:text-2xl">
+                        {mentor.initials}
+                      </span>
+                    </div>
+                  )}
 
                   <h2 className="text-lg font-bold text-heading">{mentor.name}</h2>
-                  <p className="mt-1 text-sm text-body">{mentor.university}</p>
-                  <p className="text-sm text-caption">{mentor.degree}</p>
+                  {mentor.university && (
+                    <p className="mt-1 text-sm text-body">{mentor.university}</p>
+                  )}
+                  {mentor.degree && (
+                    <p className="text-sm text-caption">{mentor.degree}</p>
+                  )}
 
-                  <p className="mt-3 text-base font-bold text-green-primary">
-                    {mentor.satScore} SAT
-                  </p>
-                  <p className="text-sm text-caption">
-                    {mentor.experience} {mentor.experience === 1 ? "year" : "years"} tutoring
-                  </p>
+                  <div className="mt-3 flex flex-wrap items-center justify-center gap-2">
+                    {mentor.experience != null && (
+                      <span className="text-sm font-semibold text-green-primary">
+                        {mentor.experience}+ yrs exp
+                      </span>
+                    )}
+                    {mentor.studentsTaught != null && (
+                      <span className="text-sm text-caption">
+                        | {mentor.studentsTaught}+ students
+                      </span>
+                    )}
+                  </div>
 
-                  <p className="mt-2 text-xs font-medium text-green-primary">
-                    {mentor.specialty}
-                  </p>
+                  {mentor.languages.length > 0 && (
+                    <p className="mt-2 text-xs text-caption">
+                      {mentor.languages.join(", ")}
+                    </p>
+                  )}
 
                   <span className="mt-4 text-sm font-semibold text-green-primary opacity-0 transition-all group-hover:opacity-100 group-hover:translate-y-0 translate-y-1">
                     View Profile &rarr;
