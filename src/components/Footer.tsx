@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
+import { studentImages } from "@/data/images";
 
 export default function Footer() {
   return (
@@ -20,6 +21,15 @@ export default function Footer() {
             <p className="mt-3 text-sm text-gray-400">
               Personalized 1-on-1 online test prep with a score improvement guarantee.
             </p>
+            <div className="mt-4 overflow-hidden rounded-lg">
+              <Image
+                src={studentImages.heroStudents}
+                alt="Students studying together"
+                width={200}
+                height={120}
+                className="h-auto w-full object-cover opacity-70"
+              />
+            </div>
           </div>
 
           {/* Courses */}

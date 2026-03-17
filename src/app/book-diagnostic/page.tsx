@@ -1,9 +1,11 @@
 "use client";
 
+import Image from "next/image";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import AnimateOnScroll from "@/components/AnimateOnScroll";
 import CountUpNumber from "@/components/CountUpNumber";
+import { studentImages } from "@/data/images";
 import { useState, FormEvent } from "react";
 
 export default function BookDiagnosticPage() {
@@ -35,8 +37,17 @@ export default function BookDiagnosticPage() {
       <Navbar />
 
       {/* Hero */}
-      <section className="bg-surface-dark py-20 text-center md:py-28">
-        <div className="mx-auto max-w-4xl px-6">
+      <section className="relative bg-surface-dark py-20 text-center md:py-28 overflow-hidden">
+        <div className="absolute inset-0 opacity-15">
+          <Image
+            src={studentImages.studentExam}
+            alt=""
+            fill
+            className="object-cover"
+            priority
+          />
+        </div>
+        <div className="relative mx-auto max-w-4xl px-6">
           <AnimateOnScroll animation="fade-up">
             <h1 className="mb-4 text-3xl font-bold text-white sm:text-4xl md:text-5xl">
               Book Your Free Diagnostic Test
@@ -196,6 +207,16 @@ export default function BookDiagnosticPage() {
                     </li>
                   ))}
                 </ul>
+              </div>
+
+              <div className="overflow-hidden rounded-2xl shadow-sm">
+                <Image
+                  src={studentImages.studentExam}
+                  alt="Student focused on exam preparation"
+                  width={600}
+                  height={400}
+                  className="h-auto w-full object-cover"
+                />
               </div>
 
               <div className="rounded-2xl bg-green-light p-6 text-center">

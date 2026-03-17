@@ -8,6 +8,10 @@ const nextConfig: NextConfig = {
         hostname: "user-assets.codeyoung.com",
         pathname: "/mentorProfiles/**",
       },
+      {
+        protocol: "https",
+        hostname: "images.unsplash.com",
+      },
     ],
   },
 };

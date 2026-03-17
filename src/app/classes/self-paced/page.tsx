@@ -1,5 +1,7 @@
+import Image from "next/image";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import { studentImages } from "@/data/images";
 
 export const metadata = {
   title: "Self-Paced Learning | Catalyst Test Prep",
@@ -13,8 +15,17 @@ export default function SelfPacedClassesPage() {
       <Navbar />
 
       {/* Hero */}
-      <section className="bg-surface-dark py-20 text-center">
-        <div className="mx-auto max-w-4xl px-6">
+      <section className="relative bg-surface-dark py-20 overflow-hidden">
+        <div className="absolute inset-0 opacity-15">
+          <Image
+            src={studentImages.studentLaptop}
+            alt=""
+            fill
+            className="object-cover"
+            priority
+          />
+        </div>
+        <div className="relative mx-auto max-w-4xl px-6 text-center">
           <h1 className="mb-4 text-4xl font-bold text-white md:text-5xl">
             Self-Paced Learning
           </h1>

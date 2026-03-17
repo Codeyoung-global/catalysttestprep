@@ -1,5 +1,7 @@
+import Image from "next/image";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import { studentImages } from "@/data/images";
 
 export const metadata = {
   title: "1:1 Personalised Classes | Catalyst Test Prep",
@@ -13,16 +15,38 @@ export default function PersonalisedClassesPage() {
       <Navbar />
 
       {/* Hero */}
-      <section className="bg-surface-dark py-20 text-center">
-        <div className="mx-auto max-w-4xl px-6">
-          <h1 className="mb-4 text-4xl font-bold text-white md:text-5xl">
-            1:1 Personalised Classes
-          </h1>
-          <p className="mx-auto max-w-2xl text-lg text-gray-300">
-            The most effective way to prepare. Your own dedicated tutor builds a
-            custom curriculum around your strengths, weaknesses, and target
-            score - so every session moves you closer to your goal.
-          </p>
+      <section className="relative bg-surface-dark py-20 overflow-hidden">
+        <div className="absolute inset-0 opacity-15">
+          <Image
+            src={studentImages.tutoringSession}
+            alt=""
+            fill
+            className="object-cover"
+            priority
+          />
+        </div>
+        <div className="relative mx-auto max-w-5xl px-6">
+          <div className="grid items-center gap-10 md:grid-cols-2">
+            <div className="text-center md:text-left">
+              <h1 className="mb-4 text-4xl font-bold text-white md:text-5xl">
+                1:1 Personalised Classes
+              </h1>
+              <p className="max-w-2xl text-lg text-gray-300">
+                The most effective way to prepare. Your own dedicated tutor builds a
+                custom curriculum around your strengths, weaknesses, and target
+                score - so every session moves you closer to your goal.
+              </p>
+            </div>
+            <div className="hidden overflow-hidden rounded-2xl shadow-2xl md:block">
+              <Image
+                src={studentImages.onlineLearning}
+                alt="Student in a personalized online tutoring session"
+                width={600}
+                height={400}
+                className="h-auto w-full object-cover"
+              />
+            </div>
+          </div>
         </div>
       </section>
 
@@ -153,24 +177,37 @@ export default function PersonalisedClassesPage() {
 
       {/* Testimonial */}
       <section className="bg-bg-alt py-16">
-        <div className="mx-auto max-w-3xl px-6 text-center">
-          <svg
-            className="mx-auto mb-4 h-10 w-10 text-green-primary opacity-40"
-            fill="currentColor"
-            viewBox="0 0 24 24"
-          >
-            <path d="M4.583 17.321C3.553 16.227 3 15 3 13.011c0-3.5 2.457-6.637 6.03-8.188l.893 1.378c-3.335 1.804-3.987 4.145-4.247 5.621.537-.278 1.24-.375 1.929-.311 1.804.167 3.226 1.648 3.226 3.489a3.5 3.5 0 01-3.5 3.5c-1.073 0-2.099-.49-2.748-1.179zm10 0C13.553 16.227 13 15 13 13.011c0-3.5 2.457-6.637 6.03-8.188l.893 1.378c-3.335 1.804-3.987 4.145-4.247 5.621.537-.278 1.24-.375 1.929-.311 1.804.167 3.226 1.648 3.226 3.489a3.5 3.5 0 01-3.5 3.5c-1.073 0-2.099-.49-2.748-1.179z" />
-          </svg>
-          <blockquote className="mb-6 text-xl italic text-heading md:text-2xl">
-            &ldquo;My tutor knew exactly where I was struggling before I even
-            said a word. In 10 weeks my SAT score went from 1180 to 1460.
-            Catalyst didn&rsquo;t just raise my score - it changed how I
-            approach learning.&rdquo;
-          </blockquote>
-          <p className="font-semibold text-heading">Priya S.</p>
-          <p className="text-sm text-body">
-            SAT Score: 1180 &rarr; 1460 &middot; Admitted to UCLA
-          </p>
+        <div className="mx-auto max-w-5xl px-6">
+          <div className="grid items-center gap-10 md:grid-cols-2">
+            <div className="overflow-hidden rounded-2xl shadow-lg">
+              <Image
+                src={studentImages.happyStudents}
+                alt="Happy students celebrating their success"
+                width={800}
+                height={500}
+                className="h-auto w-full object-cover"
+              />
+            </div>
+            <div className="text-center md:text-left">
+              <svg
+                className="mx-auto mb-4 h-10 w-10 text-green-primary opacity-40 md:mx-0"
+                fill="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path d="M4.583 17.321C3.553 16.227 3 15 3 13.011c0-3.5 2.457-6.637 6.03-8.188l.893 1.378c-3.335 1.804-3.987 4.145-4.247 5.621.537-.278 1.24-.375 1.929-.311 1.804.167 3.226 1.648 3.226 3.489a3.5 3.5 0 01-3.5 3.5c-1.073 0-2.099-.49-2.748-1.179zm10 0C13.553 16.227 13 15 13 13.011c0-3.5 2.457-6.637 6.03-8.188l.893 1.378c-3.335 1.804-3.987 4.145-4.247 5.621.537-.278 1.24-.375 1.929-.311 1.804.167 3.226 1.648 3.226 3.489a3.5 3.5 0 01-3.5 3.5c-1.073 0-2.099-.49-2.748-1.179z" />
+              </svg>
+              <blockquote className="mb-6 text-xl italic text-heading md:text-2xl">
+                &ldquo;My tutor knew exactly where I was struggling before I even
+                said a word. In 10 weeks my SAT score went from 1180 to 1460.
+                Catalyst didn&rsquo;t just raise my score - it changed how I
+                approach learning.&rdquo;
+              </blockquote>
+              <p className="font-semibold text-heading">Priya S.</p>
+              <p className="text-sm text-body">
+                SAT Score: 1180 &rarr; 1460 &middot; Admitted to UCLA
+              </p>
+            </div>
+          </div>
         </div>
       </section>
 

@@ -1,7 +1,9 @@
 "use client";
 
 import { useState, useEffect, useCallback } from "react";
+import Image from "next/image";
 import AnimateOnScroll from "./AnimateOnScroll";
+import { testimonialAvatars } from "@/data/images";
 
 const testimonials = [
   {
@@ -171,8 +173,23 @@ export default function TestimonialSlider() {
                       &ldquo;{t.text}&rdquo;
                     </p>
 
-                    {/* Name */}
-                    <p className="text-sm font-semibold text-heading">{t.name}</p>
+                    {/* Student */}
+                    <div className="flex items-center gap-3">
+                      {testimonialAvatars[t.name] ? (
+                        <Image
+                          src={testimonialAvatars[t.name]}
+                          alt={t.name}
+                          width={36}
+                          height={36}
+                          className="h-9 w-9 rounded-full object-cover"
+                        />
+                      ) : (
+                        <div className="flex h-9 w-9 items-center justify-center rounded-full bg-green-light text-xs font-bold text-green-primary">
+                          {t.name.split(" ").map(n => n[0]).join("")}
+                        </div>
+                      )}
+                      <p className="text-sm font-semibold text-heading">{t.name}</p>
+                    </div>
                   </div>
                 </div>
               ))}

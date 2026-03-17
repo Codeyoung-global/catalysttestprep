@@ -1,9 +1,11 @@
 "use client";
 
+import Image from "next/image";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import AnimateOnScroll from "@/components/AnimateOnScroll";
 import { courses } from "@/data/courses";
+import { studentImages } from "@/data/images";
 import Link from "next/link";
 
 const courseIcons: Record<string, string> = {
@@ -103,8 +105,11 @@ export default function CoursesPage() {
       </section>
 
       {/* Bottom CTA */}
-      <section className="bg-green-primary" style={{ padding: "var(--section-gap) 0" }}>
-        <div className="mx-auto max-w-4xl px-6 text-center">
+      <section className="relative bg-green-primary overflow-hidden" style={{ padding: "var(--section-gap) 0" }}>
+        <div className="absolute inset-0 opacity-10">
+          <Image src={studentImages.studentSuccess} alt="" fill className="object-cover" />
+        </div>
+        <div className="relative mx-auto max-w-4xl px-6 text-center">
           <AnimateOnScroll animation="fade-up">
             <h2 className="text-3xl font-bold text-white md:text-4xl">
               Not Sure Which Course Is Right for You?

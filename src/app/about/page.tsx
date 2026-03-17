@@ -1,9 +1,11 @@
 "use client";
 
+import Image from "next/image";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import AnimateOnScroll from "@/components/AnimateOnScroll";
 import CountUpNumber from "@/components/CountUpNumber";
+import { studentImages } from "@/data/images";
 
 const values = [
   {
@@ -51,8 +53,17 @@ export default function AboutPage() {
       <Navbar />
 
       {/* Hero */}
-      <section className="bg-surface-dark py-20 text-center md:py-28">
-        <div className="mx-auto max-w-4xl px-6">
+      <section className="relative bg-surface-dark py-20 text-center md:py-28 overflow-hidden">
+        <div className="absolute inset-0 opacity-20">
+          <Image
+            src={studentImages.studentSuccess}
+            alt=""
+            fill
+            className="object-cover"
+            priority
+          />
+        </div>
+        <div className="relative mx-auto max-w-4xl px-6">
           <AnimateOnScroll animation="fade-up">
             <h1 className="mb-4 text-3xl font-bold text-white sm:text-4xl md:text-5xl">
               About Catalyst Test Prep
@@ -121,20 +132,29 @@ export default function AboutPage() {
               </div>
             </AnimateOnScroll>
             <AnimateOnScroll animation="slide-right">
-              <div className="rounded-2xl bg-green-light p-8">
-                <h3 className="mb-4 text-xl font-bold text-heading">
+              <div className="overflow-hidden rounded-2xl">
+                <Image
+                  src={studentImages.aboutCollaboration}
+                  alt="Students collaborating in a bright study environment"
+                  width={800}
+                  height={600}
+                  className="h-full w-full object-cover"
+                />
+              </div>
+              <div className="mt-6 rounded-2xl bg-green-light p-6">
+                <h3 className="mb-3 text-lg font-bold text-heading">
                   What Sets Us Apart
                 </h3>
-                <ul className="space-y-3 text-body">
+                <ul className="space-y-2 text-sm text-body">
                   {[
                     "AI-powered diagnostic and adaptive learning",
-                    "1:1 sessions with 99th-percentile tutors",
+                    "1:1 sessions with expert tutors",
                     "Score improvement guarantee or money back",
                     "Flexible scheduling that fits your life",
                     "Holistic approach - skills, strategy & confidence",
                   ].map((item) => (
                     <li key={item} className="flex items-start gap-2">
-                      <svg className="mt-0.5 h-5 w-5 shrink-0 text-green-primary" fill="currentColor" viewBox="0 0 20 20">
+                      <svg className="mt-0.5 h-4 w-4 shrink-0 text-green-primary" fill="currentColor" viewBox="0 0 20 20">
                         <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                       </svg>
                       {item}

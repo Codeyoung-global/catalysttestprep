@@ -1,11 +1,21 @@
 "use client";
 
+import Image from "next/image";
 import AnimateOnScroll from "./AnimateOnScroll";
+import { studentImages } from "@/data/images";
 
 export default function BottomCTA() {
   return (
-    <section className="bg-surface-dark" style={{ padding: "var(--section-gap) 0" }}>
-      <div className="mx-auto max-w-3xl px-6 text-center">
+    <section className="relative bg-surface-dark overflow-hidden" style={{ padding: "var(--section-gap) 0" }}>
+      <div className="absolute inset-0 opacity-10">
+        <Image
+          src={studentImages.happyStudents}
+          alt=""
+          fill
+          className="object-cover"
+        />
+      </div>
+      <div className="relative mx-auto max-w-3xl px-6 text-center">
         <AnimateOnScroll animation="fade-up">
           <h2 className="mb-6 text-3xl font-bold text-white md:text-4xl">
             Ready to Add 150+ Points to Your SAT Score?
