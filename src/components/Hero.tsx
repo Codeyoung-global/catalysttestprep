@@ -1,7 +1,5 @@
 "use client";
 import { useState } from "react";
-import Image from "next/image";
-import { studentImages } from "@/data/images";
 
 type Step = 1 | 2 | 3 | 4;
 
@@ -80,18 +78,6 @@ export default function Hero() {
                                                                           <span className="text-sm font-semibold text-gray-400">AP News</span>
                                                                           <span className="text-sm font-semibold text-gray-400">Outlook India</span>
                                                           </div>
-                                            </div>
-
-                                            {/* Student image - visible on large screens below hero text */}
-                                            <div className="mt-10 hidden overflow-hidden rounded-2xl shadow-lg lg:block">
-                                              <Image
-                                                src={studentImages.heroStudents}
-                                                alt="Diverse students collaborating and studying together"
-                                                width={800}
-                                                height={600}
-                                                className="h-auto w-full object-cover"
-                                                priority
-                                              />
                                             </div>
 
                                             <div className="mt-8 md:hidden">

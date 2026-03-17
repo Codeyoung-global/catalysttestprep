@@ -28,7 +28,7 @@ export default function WhatsAppCTA() {
           href="https://chat.whatsapp.com/placeholder"
           target="_blank"
           rel="noopener noreferrer"
-          className="inline-flex items-center gap-3 rounded-lg bg-white px-8 py-4 text-lg font-bold text-green-primary transition-colors hover:bg-green-light"
+          className="inline-flex items-center gap-3 rounded-lg bg-white px-8 py-4 text-lg font-bold text-green-primary transition-colors hover:bg-gray-100"
         >
           <svg
             className="h-6 w-6"

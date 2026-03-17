@@ -21,9 +21,9 @@ export default function ClassGlimpse() {
           <div className="relative w-full overflow-hidden rounded-2xl shadow-xl" style={{ paddingBottom: "56.25%" }}>
             <iframe
               className="absolute inset-0 h-full w-full"
-              src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+              src="https://codeyoung2-my.sharepoint.com/personal/team_codeyoung_com/_layouts/15/embed.aspx?UniqueId=71f09c20-8e94-11a9-4e88-39041a121dce&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=Ka6jTY"
               title="A glimpse of Catalyst Test Prep classes"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allow="autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; fullscreen"
               allowFullScreen
             />
           </div>

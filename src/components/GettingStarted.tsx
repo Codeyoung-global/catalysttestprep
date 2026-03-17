@@ -62,12 +62,12 @@ export default function GettingStarted() {
         <div className="hidden md:block">
           <div className="relative flex items-start justify-between">
             {/* Connecting line */}
-            <div className="absolute left-[calc(12.5%+24px)] right-[calc(12.5%+24px)] top-8 h-0.5 bg-gradient-to-r from-green-primary/20 via-green-primary/40 to-green-primary/20" />
+            <div className="absolute left-[calc(12.5%+24px)] right-[calc(12.5%+24px)] top-8 z-0 h-0.5 bg-gradient-to-r from-green-primary/20 via-green-primary/40 to-green-primary/20" />
 
             {steps.map((step) => (
               <AnimateOnScroll key={step.number} animation="fade-up" delay={step.number * 150}>
-                <div className="relative flex w-full flex-col items-center px-4 text-center">
-                  <div className="relative z-10 flex h-16 w-16 items-center justify-center rounded-2xl bg-green-light text-green-primary transition-all duration-300 hover:scale-110 hover:bg-green-primary hover:text-white hover:shadow-lg">
+                <div className="relative z-10 flex w-full flex-col items-center px-4 text-center">
+                  <div className="flex h-16 w-16 items-center justify-center rounded-2xl bg-green-light text-green-primary transition-all duration-300 hover:scale-110 hover:bg-green-primary hover:text-white hover:shadow-lg">
                     {step.icon}
                   </div>
                   <h3 className="mt-4 text-base font-bold text-heading">{step.title}</h3>

@@ -209,16 +209,6 @@ export default function BookDiagnosticPage() {
                 </ul>
               </div>
 
-              <div className="overflow-hidden rounded-2xl shadow-sm">
-                <Image
-                  src={studentImages.studentExam}
-                  alt="Student focused on exam preparation"
-                  width={600}
-                  height={400}
-                  className="h-auto w-full object-cover"
-                />
-              </div>
-
               <div className="rounded-2xl bg-green-light p-6 text-center">
                 <p className="text-sm font-semibold text-green-primary">
                   100% Free &middot; No Credit Card Required &middot; No Obligation
