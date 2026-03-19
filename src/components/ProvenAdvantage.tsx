@@ -152,7 +152,7 @@ export default function ProvenAdvantage() {
           <div className="grid grid-cols-2 gap-4 md:grid-cols-4 md:gap-6">
             {features.map((f, i) => (
               <AnimateOnScroll key={i} animation="fade-up" delay={i * 100}>
-                <div className="flex flex-col gap-2 rounded-xl border border-gray-100 bg-white p-5 shadow-sm">
+                <div className="flex h-full flex-col gap-2 rounded-xl border border-gray-100 bg-white p-5 shadow-sm">
                   {f.icon}
                   <p className="text-sm font-medium text-heading">{f.text}</p>
                 </div>

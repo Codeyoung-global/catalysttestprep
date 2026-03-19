@@ -105,7 +105,6 @@ export default function Home() {
       <Navbar />
       <Hero />
       <ProvenAdvantage />
-      <TrustBar />
       <IntroParagraph />
       <TrialBenefits />
       <TestimonialSlider />
