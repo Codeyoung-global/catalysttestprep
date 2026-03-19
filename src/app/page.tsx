@@ -1,5 +1,6 @@
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
+import ProvenAdvantage from "@/components/ProvenAdvantage";
 import TrustBar from "@/components/TrustBar";
 import IntroParagraph from "@/components/IntroParagraph";
 import TrialBenefits from "@/components/TrialBenefits";
@@ -103,6 +104,7 @@ export default function Home() {
       />
       <Navbar />
       <Hero />
+      <ProvenAdvantage />
       <TrustBar />
       <IntroParagraph />
       <TrialBenefits />

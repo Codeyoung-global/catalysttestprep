@@ -6,6 +6,7 @@ interface CountUpNumberProps {
   end: number;
   suffix?: string;
   prefix?: string;
+  separator?: string;
   duration?: number;
   className?: string;
 }
@@ -14,6 +15,7 @@ export default function CountUpNumber({
   end,
   suffix = "",
   prefix = "",
+  separator,
   duration = 2000,
   className = "",
 }: CountUpNumberProps) {
@@ -60,7 +62,7 @@ export default function CountUpNumber({
 
   return (
     <span ref={ref} className={className}>
-      {prefix}{count}{suffix}
+      {prefix}{separator ? count.toLocaleString() : count}{suffix}
     </span>
   );
 }
